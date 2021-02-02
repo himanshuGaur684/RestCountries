@@ -23,16 +23,19 @@
 
             <ImageView
                 android:id="@+id/list_item_image"
-                android:layout_width="100dp"
-
-                android:padding="4dp"
-                android:layout_height="80dp"
+                glide="@{data.flag}"
+                android:layout_margin="10dp"
+                android:layout_width="110dp"
+                android:layout_height="90dp"
                 android:layout_gravity="center_vertical"
+                android:contentDescription="@string/jai_shree_ram"
+                android:padding="4dp"
                 android:scaleType="fitXY" />
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+
                 android:orientation="vertical">
 
                 <TextView
@@ -67,9 +70,9 @@
 
                 <TextView
                     style="@style/TextAppearance.AppCompat.Body1"
-                    android:layout_marginBottom="8dp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
                     android:text="@{`Languages : `+String.valueOf(data.languages.get(0).name)}" />
 
             </LinearLayout>
